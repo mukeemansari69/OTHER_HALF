@@ -1,0 +1,889 @@
+
+
+/* ########################################################################################################## Banner Seaction ########################################################################################### */
+
+
+.banner-section {
+  background: linear-gradient(#00000099, #00000099), url("images/8c6767323e75cef569e3be390922eb673056b195.jpg") no-repeat center center;
+  background-size: cover;
+  max-height: 440px;
+  height: 100vh;
+  padding: 60px 20px;
+  color: #FFFFFF;
+}
+
+.banner-heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+.banner-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* ############################################################################################################# Banner Footer Seaction ################################################################################### */
+
+
+.banner-footer-section .marquee-wrapper {
+  background-color: #e5744b;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 78px;
+  width: 100%;
+}
+
+.banner-footer-section .marquee-inner {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.banner-footer-section .marquee-item {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 40px;
+  white-space: nowrap;
+}
+
+.banner-footer-section .marquee-item img {
+  width: 26.99px;
+  height: 24px;
+  transform: rotate(-28.46deg);
+  margin: 0 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .banner-footer-section .marquee-item {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .banner-footer-section .marquee-item img {
+    width: 22px;
+    height: 20px;
+    margin: 0 6px;
+    transform: rotate(-150.46deg);
+  }
+}
+
+
+
+/*############################################################################################################################### its Ok Seaction ##########################################################################  */
+
+
+.its-ok-section {
+  padding: 120px 240px 20px 240px;
+  height: 260px;
+  background-color: #ffffff;
+  max-width: 1920px;
+}
+
+.its-ok-section .container {
+  display: flex;
+  gap: 84px;
+}
+
+.its-ok-heading h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  line-height: 125%;
+  font-weight: 400;
+  margin: 0;
+  color: #000;
+  width: 363px;
+}
+
+.its-ok-paragraph {
+  max-width: 954px;
+  height: 90px;
+}
+
+.its-ok-paragraph p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 152%;
+  margin: 0;
+  color: #000;
+ max-width: 954px;
+  margin-top: 3%;
+}
+
+@media (max-width: 992px) {
+  .its-ok-section .container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: start;
+  }
+
+  .its-ok-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .its-ok-paragraph {
+    height: auto;
+  }
+}
+
+
+/* ###################################################################################################################################### Feature Dog Seaction ############################################################## */
+
+
+.feature-dog-section {
+  width: 100%;
+  max-width: 1920px;
+  height: 526px;
+  padding: 32px 154px 100px 10px;
+  background-color: #fff;
+}
+
+.dog-img-col {
+  position: relative;
+}
+
+.dog-image {
+    width: 823.71px;
+    height: 549px;
+    object-fit: contain;
+    margin-top: 97px;
+    margin-left: -155px;
+}
+.snooze-icon {
+  position: absolute;
+  top: 49%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 63px; /* adjust based on your icon */
+}
+
+.feature-card {
+  width: 100%;
+  max-width: 460.5px;
+  height: 181px;
+  padding: 0 24px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: -155px;
+}
+
+.feature-icon {
+  width: 68px; /* adjust size */
+  height: 68px;
+  margin-bottom: 8px;
+}
+
+.feature-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.feature-card p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .feature-dog-section {
+    padding: 32px 20px 80px 20px;
+    height: auto;
+  }
+
+  .dog-image {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
+  }
+
+  .snooze-icon {
+    display: none;
+  }
+
+  .feature-card-col {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .feature-dog-section {
+    padding: 20px;
+    height: auto;
+  }
+
+  .row.gx-5 {
+    flex-direction: column-reverse;
+  }
+
+  .dog-img-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .dog-image {
+    width: 90%;
+    height: auto;
+    margin: 0;
+  }
+
+  .snooze-icon {
+    display: none;
+  }
+
+  .feature-card-col {
+    gap: 24px;
+  }
+
+  .feature-card {
+    margin-left: 0;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+  }
+
+  .feature-card:last-child {
+    border-bottom: none;
+  }
+
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+}
+/* Tablet: Adjust size and position */
+@media (max-width: 768px) {
+  .snooze-icon {
+    width: 48px;
+    height: 48px;
+    top: 55%;
+    left: 60%;
+  }
+}
+
+/* Mobile: Show and reposition below dog image */
+@media (max-width: 480px) {
+  .dog-img-col {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .dog-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .snooze-icon {
+    position: static;
+    transform: none;
+    margin-top: -189px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+
+/* ################################################################################################################################# our Process Seaction ########################################################################## */
+.our-process-section {
+    padding: 60px 0;
+    background-color: #fff;
+    min-height: 818px; /* Maintain the desired section height */
+    display: flex;
+    align-items: center; /* Center content vertically within section */
+}
+
+.process-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.process-subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f5b3f;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.process-title {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 10px 0 80px;
+}
+
+.process-structure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 50px; /* Space for the horizontal line at the very bottom */
+}
+
+/* Horizontal Dotted Line */
+.timeline-horizontal-line {
+    position: absolute;
+    top: 50%; /* Position the line vertically in the middle of the process-items-wrapper */
+    left: 44%;
+    transform: translate(-50%, -50%); /* Center based on its own size */
+    width: calc(100% - 100px); /* Adjust width as needed, ensure it extends between items */
+    border-top: 2px dotted #1f5b3f; /* Dark green dotted line */
+    z-index: 0; /* Behind other elements */
+}
+
+.process-items-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* Added height to ensure space for vertical lines */
+    height: 350px; /* Adjust this height based on the overall vertical span needed */
+    align-items: center; /* Vertically align items relative to each other for better control */
+}
+
+.process-item {
+    flex: 1;
+    text-align: left; /* Aligned left as per the image */
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+    max-width: 250px;
+}
+
+/* Adjusting the vertical position of the items */
+.process-step-1 { order: 1; margin-top: -236px; margin-left: -70px; /* Pull up */ }
+.process-step-2 { order: 2; margin-top: 434px; /* Push down */ }
+.process-step-3 { order: 3; margin-top: -236px; margin-left: 70px; /* Pull up */ }
+.process-step-4 { order: 4; margin-top: 434px; /* Push down */ }
+
+
+
+.process-icon {
+    max-width: 70%; /* Adjust image size within the circle */
+    max-height: 70%; /* Adjust image size within the circle */
+    object-fit: contain;
+    border-radius: 50%; /* Apply border-radius to the image itself if it's square */
+}
+
+.process-item h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+    color: #333; /* Darker color for headings */
+}
+
+.process-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 8px 0 0; /* Aligned left, so no auto margin */
+    width: 100%;
+    height: auto;
+    min-height: 54px;
+    color: #666; /* Lighter color for paragraphs */
+}
+
+.step-number {
+    position: absolute;
+    font-size: 128px;
+    font-weight: 800;
+    color: #f0f0f0; /* Light grey for the large numbers */
+    /* Position relative to process-item, adjust as needed */
+    top: 50%; /* Start roughly in the middle of the item content */
+    right: 0;
+    transform: translateY(-50%); /* Vertically center */
+    z-index: -1;
+    font-family: 'Luckiest Guy', cursive;
+    white-space: nowrap; /* Prevent numbers from wrapping */
+}
+
+/* Vertical Lines and Solid Dots */
+
+/* Solid Dot on the horizontal line */
+.process-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #1f5b3f; /* Dark green solid dot */
+    border-radius: 50%;
+    z-index: 2; /* On top of lines */
+    border: 2px solid #fff; /* White border for the dot */
+    left: 9%;
+    transform: translateX(-50%);
+    margin-top: -16%; /* Center horizontally */
+}
+
+/* Vertical line for top row items (steps 1 and 3) */
+.process-step-1::before,
+.process-step-3::before {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* Position from the bottom of the process-item */
+    left: 7%;
+    transform: translateX(-50%);
+    width: 2px; /* Thickness of the vertical line */
+    height: calc(100% - 100px); /* Adjusted length to reach the horizontal line */
+    background-color: #1f5b3f; /* Dark green for the vertical line */
+    z-index: 1; /* Between dot and horizontal line */
+}
+
+/* Vertical line for bottom row items (steps 2 and 4) */
+.process-step-2::before,
+.process-step-4::before {
+    content: '';
+    position: absolute;
+    top: -72px; /* Position from the top of the process-item */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 117px); /* Adjusted length to reach the horizontal line */
+    background-color: #1f5b3f;
+    z-index: 1;
+    margin-left: -40%;
+}
+
+/* Positioning of dots relative to the process-item */
+.process-step-1::after,
+.process-step-3::after {
+    bottom: -75px; /* Position dot correctly on the horizontal line for top items */
+}
+
+.process-step-2::after,
+.process-step-4::after {
+    top: -75px; /* Position dot correctly on the horizontal line for bottom items */
+}
+
+/* Adjustments for icon-circle margin and item text alignment */
+.process-item .icon-circle {
+    margin-left: 0; /* Align icon-circle to the left within process-item */
+    margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .process-structure {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .process-items-wrapper {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .process-item {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: start;
+  }
+
+  .process-step-1,
+  .process-step-2,
+  .process-step-3,
+  .process-step-4 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    order: unset;
+  }
+
+  .process-item::after,
+  .process-step-1::before,
+  .process-step-2::before,
+  .process-step-3::before,
+  .process-step-4::before {
+    display: none;
+  }
+
+  .step-number {
+    transform: none;
+    font-size: 95px;
+    color: #f0f0f0;
+    margin-top: -66px;
+  }
+
+  .timeline-horizontal-line {
+    display: none;
+  }
+}
+
+
+
+/* ################################################################################################################################   We Obses ############################################################################## */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+#we-obsess {
+  display: flex;
+  height: 751px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.text-content {
+  width: 50%;
+  background-color: #f26d45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  width: 640px;
+  height: 471px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: white;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 125%;
+  margin: 0;
+}
+
+.section-description {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.accordion {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 15px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.accordion.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.accordion-content {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.accordion.active .accordion-content {
+  display: block;
+}
+
+.image-content {
+  width: 50%;
+  background: url('images/7db504b9782777d2a0e7dfb32ad73d75b66ba064.jpg') center/cover no-repeat;
+}
+.accordion {
+  position: relative;
+  padding-right: 50px;
+}
+
+.accordion-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: auto;
+}
+
+/* resposive  */
+@media (max-width: 480px) {
+  #we-obsess {
+    flex-direction: column-reverse; /* This flips the order */
+    height: auto;
+  }
+
+  .image-content {
+    width: 101%;
+    height: 415px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-content {
+    width: 101%;
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .text-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .section-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .accordion {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .accordion-icon {
+    width: 20px;
+    right: 10px;
+  }
+}
+
+
+
+
+/* ############################################################################################################################################### ingrediant ############################################################## */
+
+#ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1920px;
+  margin: auto;
+}
+
+/* ✅ New separated heading */
+.ingredient-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.ingredient-heading h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 125%;
+  margin: 0;
+  text-align: center;
+  width: 667px;
+  height: 120px;
+  margin-left: 710px;
+  margin-top: 120px;
+  margin-bottom: -106px;
+}
+
+.ingredient-image {
+  width: 50%;
+  background: url('images/f3e4d13e3c4f0bcd3a13073faa37826fe8f0017b.png') center/contain no-repeat;
+  background-color: #fff;
+  margin-left: -6%;
+  height: 400px;
+}
+
+.ingredient-text {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.ingredient-content {
+  width: 667px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ingredient-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  line-height: 152%;
+  margin: 0;
+}
+
+.ingredient-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  height: 55px;
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+}
+
+.btn.green {
+  background-color: #007f3f;
+  color: white;
+  border: 2px solid black;
+}
+
+.btn.yellow {
+  background-color: #ffe447;
+  color: black;
+  border: 2px solid black;
+}
+
+
+@media (max-width: 768px) {
+  #ingredient {
+    flex-direction: column;
+  }
+
+  .ingredient-heading {
+    padding: 20px;
+  }
+
+  .ingredient-heading h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .ingredient-image,
+  .ingredient-text {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .ingredient-image {
+    height: 250px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .ingredient-content p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .ingredient-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  #ingredient {
+    flex-direction: column;
+  }
+
+  .ingredient-heading {
+    order: 1; /* 🟢 Heading First */
+    padding: 20px;
+  }
+
+  .ingredient-image {
+    order: 2; /* 🟢 Image Second */
+    width: 100%;
+    height: 250px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 20px;
+  }
+
+  .ingredient-text {
+    order: 3; /* 🟢 Text Last */
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ingredient-heading h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .ingredient-content {
+    width: 100%;
+  }
+
+  .ingredient-content p {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .ingredient-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 453px;
+  }
+}

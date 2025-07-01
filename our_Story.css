@@ -1,0 +1,824 @@
+.dog-banner {
+  background-image: url("images/95142d25bff7b97a262f2a7d0294fee8c6cc7da6.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vw; /* Responsive height based on viewport width */
+  max-height: 440px; /* Max height to limit on large screens */
+  color: white;
+  padding: 30px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dog-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000099;
+  z-index: 0;
+}
+
+.dog-heading-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.dog-heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .dog-banner {
+    height: 60vw;
+    max-height: none;
+    padding: 20px 10px;
+  }
+  .dog-heading {
+    font-size: 32px;
+  }
+  .dog-subtext {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dog-banner {
+    height: 80vw;
+  }
+  .dog-heading {
+    font-size: 24px;
+  }
+  .dog-subtext {
+    font-size: 14px;
+  }
+}
+
+.dog-subtext {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+/* ###################### Story Seaction ###################### */
+
+
+.heading-font {
+  font-family: 'Luckiest Guy', cursive;
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.story-section {
+  background-color: #ffffff;
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+ /*  padding-left: 15px;
+  padding-right: 15px */;
+  margin-bottom: 340px; /* Reduced bottom margin for better mobile spacing */
+}
+
+@media (max-width: 768px) {
+  .story-section .heading-font {
+    font-size: 1.5rem;
+  }
+  .story-section p {
+    font-size: 1rem;
+  }
+  .story-section blockquote.custom-blockquote p {
+    font-size: 1rem;
+  }
+  .story-section .col-lg-6.col-md-12:first-child {
+    order: 1;
+  }
+  .story-section .col-lg-6.col-md-12:last-child {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-section .heading-font {
+    font-size: 1.25rem;
+  }
+  .story-section p {
+    font-size: 0.9rem;
+  }
+  .story-section blockquote.custom-blockquote p {
+    font-size: 0.9rem;
+  }
+}
+
+.custom-blockquote {
+  font-weight: bold;
+  border-left: 4px solid #ff8c00;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* ########################################################################################################################        CSS for Heart Behind SEcation            ########################################################################## */
+
+
+/* Overall Section Styling */
+.main-page-section {
+    position: relative; /* For absolute positioning of child elements */
+    background-color: #f8f8f8; /* Example background color */
+    padding: 2rem 1rem 4rem; /* Add padding instead of fixed height */
+    width: 100vw;
+   
+}
+
+/* New wrapper for video to position absolutely behind the heart */
+.video-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 68%;
+    height: 100%;
+    z-index: 0; /* Behind the oggie-title-container which has z-index 10 */
+    overflow: hidden;
+    margin-left: 16%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.video-wrapper video.main-visual-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover to fill the wrapper */
+    display: block;
+}
+
+/* Main Visual Area (formerly Hero Image Container) */
+.main-visual-area {
+    width: 100%; /* To make it responsive within its parent */
+    max-width: 100%;
+    margin: 0 auto; /* To center it if it's not full width */
+    height: auto;
+    position: relative;
+    margin-top: -460px; /* For positioning the play button overlay */
+}
+
+.main-visual-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the image */
+    object-fit: contain; /* Ensures the image fits the container while maintaining aspect ratio */
+    max-height: 80vh; /* Limit max height relative to viewport */
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Example size */
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* You would add a play icon here, e.g., with background-image, SVG, or a font icon */
+}
+
+/* ###################################################################################################################           "The Heart Behind Oggie" Container           ##############################################################*/
+.oggie-title-container {
+    width: 90%;
+    max-width: 695px;
+    height: auto;
+    position: relative; /* Changed from absolute to relative */
+    margin: 2rem auto 3rem auto;
+    text-align: center;
+    z-index: 10; /* To ensure it's above other elements if they overlap */
+}
+
+.oggie-title-container .philosophy-label {
+    font-family: sans-serif; /* Or your preferred body font */
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #777; /* Example color */
+    margin-bottom: 10px; /* Space between label and title */
+    letter-spacing: 2px;
+}
+
+.oggie-title-container h2 {
+    font-family: 'Luckiest Guy', cursive; /* Make sure this font is imported */
+    font-weight: 400;
+    font-size: 4vw;
+    max-font-size: 64px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    color: #333; /* Example color */
+    margin-top: 2rem;
+}
+
+/* Dog Image */
+.dog-image {
+   width: 46%;
+    max-width: 1260px;
+    height: auto;
+    position: absolute;
+    margin: 0 auto 0rem auto;
+    left: 0;
+   bottom: 0;
+    z-index: 1;
+    object-fit: contain
+}
+
+/* Wrapper for the three points */
+.points-wrapper {
+    position: relative; /* Changed from absolute to relative */
+    margin: 0 auto;
+    width: 90%;
+    max-width: 558px; /* To constrain the width of the content column */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally within the wrapper */
+    gap: 12rem; /* Gap between the sections */
+    padding-bottom: 2rem;
+}
+
+/* Styling for each individual point */
+.point-container {
+    display: flex;
+    flex-direction: column; /* Stacks number, title, and description vertically */
+    align-items: center; /* Centers content horizontally within its column */
+    text-align: center;
+    position: relative; /* For potential pseudo-elements like the vertical line */
+}
+
+/* Vertical Line Connector (Example using pseudo-element) */
+/* You would need to refine this to connect multiple points seamlessly */
+.point-container:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -8.5rem; /* Half of the gap to connect between points */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; /* Thickness of the line */
+    height: 7rem; /* Equals the gap */
+    background-color: #ff9966; /* Orange color, matching the numbers */
+    z-index: 0; /* Behind the numbers and text */
+}
+
+@media (max-width: 768px) {
+    .point-container:not(:last-child)::after {
+        bottom: -1rem;
+        height: 1.5rem;
+    }
+    /* Hide dog image on mobile */
+    .dog-image {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .point-container:not(:last-child)::after {
+        bottom: -3rem;
+        height: 2.5rem;
+    }
+}
+
+.point-number {
+    width: 50px; /* Example size for the circle */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff9966; /* Orange color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif; /* Or a bold numeric font */
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px; /* Space below the number */
+    z-index: 2; /* To ensure numbers are above the connecting line */
+}
+
+.point-title {
+    font-family: 'Luckiest Guy', cursive; /* Or another prominent font */
+    font-size: 32px;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.point-description {
+    font-family: sans-serif; /* Your preferred body font */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 450px; /* Constrain description width for readability */
+}
+
+/* Basic Responsiveness (add more as needed) */
+@media (max-width: 768px) {
+    .oggie-title-container {
+        width: 90%; /* Adjust width for smaller screens */
+        font-size: 6vw; /* Smaller font size */
+        top: auto; /* Remove fixed top */
+        margin-top: 2rem;
+    }
+    .oggie-title-container h2 {
+        font-size: 6vw;
+    }
+    .dog-image {
+        width: 100%;
+        left: 0;
+        top: auto; /* Adjust positioning for mobile */
+        position: absolute; /* Change to relative or different absolute positioning */
+        /* margin-top: 50px;  *//* Add space */
+        height: auto;
+        margin-bottom: -23rem; /* Allow height to adjust */
+    }
+    .points-wrapper {
+        width: 90%;
+        top: auto; /* Remove fixed top */
+        position: relative; /* Change to relative */
+        padding-top: 50px; /* Add space from previous section */
+        gap: 2rem;
+    }
+    .main-page-section {
+        height: auto; /* Allow height to expand based on content */
+        padding-bottom: 50px; /* Add some padding at the bottom */
+    }
+}
+
+@media (max-width: 480px) {
+    .oggie-title-container {
+        font-size: 8vw;
+        margin-top: 1rem;
+    }
+    .oggie-title-container h2 {
+        font-size: 8vw;
+    }
+    .points-wrapper {
+        gap: 1.5rem;
+    }
+    .point-title {
+        font-size: 24px;
+    }
+    .point-description {
+        font-size: 14px;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+@media (max-width: 768px) {
+    /* VIDEO: Contained and responsive inside background */
+    .main-visual-area {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-height: 50vh; /* Keeps video small on mobile */
+        overflow: hidden;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Keeps full video visible inside box */
+        display: block;
+        margin-left: -25%;
+        margin-top: 4%;
+    }
+
+    /* Hide dog image */
+    .dog-image {
+        display: none;
+    }
+
+    /* Middle section - Title container */
+    .oggie-title-container {
+        width: 90%;
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+
+    .oggie-title-container h2 {
+        font-size: 6vw; /* Responsive font size */
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+
+    .oggie-title-container .philosophy-label {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    /* Points section */
+    .points-wrapper {
+        width: 90%;
+        max-width: 100%;
+        gap: 2rem;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .point-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .point-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .point-description {
+        font-size: 14px;
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    .point-container:not(:last-child)::after {
+        bottom: -1rem;
+        height: 1.5rem;
+    }
+
+    .main-page-section {
+        padding-bottom: 2rem;
+        background-color: #fff; /* Optional: fallback in case video is too small */
+    }
+}
+
+
+
+/* #############################################################################################################          Our Mession section                    ###################################################################################### */
+.our-mission {
+  height: auto;
+  background-color: #0F4A12;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 15px;
+}
+
+.mission-heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.mission-subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 3rem;
+}
+
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-row .icon-item {
+  width: 150px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.icon-item img {
+  max-width: 101px;
+  margin-bottom: 10px;
+}
+
+.mission-container {
+  max-width: 1179px;
+  margin-bottom: 3rem;
+}
+
+.icon-row-container {
+  max-width: 1440px;
+  margin-bottom: 2rem;
+  padding: 0 10px;
+}
+
+/* ---------- Responsive Styles ---------- */
+@media (max-width: 1024px) {
+  .mission-heading {
+    font-size: 40px;
+  }
+
+  .mission-subtext {
+    font-size: 15px;
+  }
+
+  .icon-row .icon-item {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-heading {
+    font-size: 32px;
+  }
+
+  .mission-subtext {
+    font-size: 14px;
+    margin-top: 2rem;
+    line-height: 1.6;
+  }
+
+  .icon-row {
+    gap: 16px 10px;
+  }
+
+  .icon-row .icon-item {
+    width: 30%;
+    font-size: 12px;
+  }
+
+  .icon-item img {
+    max-width: 55px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-heading {
+    font-size: 26px;
+  }
+
+  .mission-subtext {
+    font-size: 13px;
+    margin-top: 1.5rem;
+  }
+
+  .icon-row .icon-item {
+    width: 45%; /* 👈 This will ensure 2 items per row */
+    font-size: 11px;
+  }
+
+  .icon-item img {
+    max-width: 48px;
+  }
+}
+
+/* #################################################################################################           Made By Dog People Seaction                         ################################################################################### */
+
+.dog-people-section {
+  background-color: #FAF9F5;
+  width: 100%;
+  padding: 60px 20px;
+  margin: 0 auto;
+}
+
+.heading-container {
+  max-width: 906px;
+  margin-bottom: 60px;
+}
+
+.main-heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 64px;
+}
+
+.card-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-row {
+  display: flex;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dog-card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 532px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  flex: 1 1 30%;
+}
+
+.dog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+  flex-direction: column;
+}
+
+.overlay-dark .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-light .overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 72%;
+  transform: translateY(150%);
+  transition: all 0.3s ease;
+}
+
+.card-title h3 {
+  margin-bottom: 5px;
+}
+
+.card-title span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.card-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.dog-card:hover .card-title {
+  transform: translateY(0%);
+}
+
+.dog-card:hover .card-description {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.carousel-lines {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-lines .line {
+  display: inline-block;
+  width: 30px;
+  height: 6px;
+  background-color: #ccc;
+  margin: 0 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-lines .line.active {
+  background-color: #E8754C;
+}
+
+@media (max-width: 768px) {
+  .card-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .dog-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    max-width: 100%;
+  }
+}
+/* #################################################################################################################################    our Next Step Seaction                     ################################################################## */
+
+
+.our-next-step-section {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.content-card {
+  max-width: 71%;
+  margin-right: 48px;
+}
+
+.step-heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.step-paragraph {
+  font-size: 18px;
+  color: #333;
+}
+
+.step-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: #222;
+  font-size: 18px;
+}
+
+.mission-box {
+  background-color: #144d00;
+  color: #EBF466;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.img-fluid.object-cover {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* ✅ Mobile responsive order and spacing */
+@media (max-width: 768px) {
+  .content-card {
+    text-align: center;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .step-paragraph,
+  .step-list {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .step-list {
+    text-align: left;
+  }
+
+  .mission-box {
+    font-size: 16px;
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .img-fluid.object-cover {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  /* Hide duplicate heading inside .content-card on mobile */
+  .content-card .step-heading {
+    display: none;
+  }
+}
